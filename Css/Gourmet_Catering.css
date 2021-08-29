@@ -1,0 +1,295 @@
+/* Start variable */
+:root {
+    --hover_color: silver;
+    --transp_color: #777;
+    --Main_padding: 80px;
+}
+
+/* End variable */
+/* Start Global Rules */
+* {
+    box-sizing: content-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 4px;
+}
+
+body {
+    font-family: "Times New Roman", Georgia, Serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}
+
+/* End Global Rules */
+/* Start Companents */
+.hover:hover {
+    background-color: var(--hover_color);
+}
+
+.padding {
+    padding-top: var(--Main_padding);
+    padding-bottom: var(--Main_padding);
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.container .image img {
+    opacity: 0.7;
+}
+
+h1 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 35px;
+    padding-bottom: 30px;
+}
+
+h4 {
+    font-weight: normal;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+p {
+    color: var(--transp_color);
+    letter-spacing: 0.3px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* End Companents */
+/* Start header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    max-height: 56px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:768px) {
+    header ul {
+        display: none;
+    }
+}
+
+header ul li {
+    padding: 15px;
+    cursor: pointer;
+}
+
+header ul li a {
+    cursor: pointer;
+    width: 100%;
+    padding: 0;
+}
+
+/* End header */
+/* Start Home */
+.home {
+    margin-top: 56px;
+    position: relative;
+}
+
+.home img {
+    width: 100%;
+}
+
+.home h1 {
+    color: var(--transp_color);
+    position: absolute;
+    left: 30px;
+    bottom: -10px;
+}
+
+@media (max-width:768px) {
+    .home h1 {
+        position: absolute;
+    }
+}
+
+/* End Home */
+/* Start About */
+.about .image img {
+    width: 500px;
+    height: 750px;
+}
+
+.about .text {
+    padding-left: 50px;
+}
+
+@media (max-width:768px) {
+    .about .image {
+        display: none;
+    }
+
+    .about .text {
+        padding-left: 0;
+    }
+}
+
+
+/* End About */
+/* Start Menu */
+.menu .box {
+    padding-bottom: 50px;
+}
+
+.menu img {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+.menu img::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+    background-color: violet;
+    z-index: 2;
+}
+
+@media (max-width:768px) {
+    .menu .container {
+        flex-direction: column;
+    }
+
+
+}
+
+/* End Menu */
+/* Start Contact */
+.contact .container h1{
+    text-align: left;
+}
+.contact .container p{
+    color: black;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.contact .container h4{
+    letter-spacing: 1px;
+    color: #607d8b;
+}
+
+.contact .container .info{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .container .info input{
+    padding:16px 5px;
+    border-color: transparent transparent #ddd;
+}
+
+.contact .container .info input:last-child{
+    width: fit-content;
+    border: none;
+    padding: 10px 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.contact .container .info input::placeholder{
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+/* End Contact */
+/* Start Footer */
+footer{
+    padding-bottom: calc(var(--Main_padding) - 40px);
+    padding-top: var(--Main_padding);
+}
+footer p{
+    text-align: center;
+    font-size: 14px;
+    color: black;
+}
+footer a{
+    letter-spacing: 1px;
+    color: black;
+}
+footer a:hover{
+    color: #4CAF50;
+}
+/* End Footer */
